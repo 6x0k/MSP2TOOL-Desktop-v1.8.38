@@ -1,0 +1,64 @@
+<Window x:Class="MSP2TOOL.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MSP2TOOL Desktop — Clean 1.8.38"
+        Width="1440" Height="900" MinWidth="1000" MinHeight="650"
+        Background="{DynamicResource WindowBg}"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="62"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#0F131B" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,0,1">
+            <Grid Margin="14,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Width="36" Height="36" CornerRadius="10" Background="#1D1730" Margin="0,0,10,0">
+                        <TextBlock Text="M" Foreground="#C4B5FD" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <StackPanel>
+                        <TextBlock Text="MSP2TOOL" Foreground="{DynamicResource TextBrush}" FontWeight="Bold" FontSize="16"/>
+                        <TextBlock Text="Clean Desktop · v1.8.38" Foreground="{DynamicResource MutedBrush}" FontSize="11"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Click="Back_Click" ToolTip="Zurück">←</Button>
+                    <Button Click="Forward_Click" ToolTip="Vorwärts">→</Button>
+                    <Button Click="Refresh_Click" ToolTip="Neu laden">↻</Button>
+                    <TextBox x:Name="AddressBox" Width="520" Height="32" Margin="8,0" VerticalContentAlignment="Center"
+                             Foreground="White" Background="#171C27" BorderBrush="#2A3140" Padding="10"
+                             Text="https://moviestarplanet2.com/" KeyDown="AddressBox_KeyDown"/>
+                    <Button Click="Go_Click">Go</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Click="OpenGame_Click">MSP2</Button>
+                    <Button Click="ClearData_Click">Daten löschen</Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <wv2:WebView2 x:Name="Browser" xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"/>
+            <Border x:Name="StartupOverlay" Background="#0B0D12" Visibility="Visible">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="MSP2TOOL wird gestartet…" Foreground="White" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="StartupStatus" Text="WebView2 und Clean Extension werden geladen" Foreground="#9AA4B5" Margin="0,10,0,0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2" Background="#0F131B" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,1,0,0">
+            <DockPanel Margin="12,0">
+                <TextBlock x:Name="StatusText" Text="Bereit" Foreground="{DynamicResource MutedBrush}" VerticalAlignment="Center"/>
+                <TextBlock Text="Privacy-clean build · keine Vendor-Telemetrie/Vault-Funktionen" Foreground="#667085" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>
