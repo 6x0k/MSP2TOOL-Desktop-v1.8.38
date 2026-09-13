@@ -173,7 +173,7 @@ Clone the repository:
 
 ```powershell
 git clone https://github.com/6x0k/MSP2TOOL-Desktop-v1.8.38.git
-cd MSP2TOOL-Desktop
+cd MSP2TOOL-Desktop-v1.8.38
 ```
 
 Restore the NuGet dependencies:
