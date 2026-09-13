@@ -29,7 +29,7 @@ A modern, privacy-focused desktop toolkit for MovieStarPlanet 2, built with C#/.
 
 ### MSP2TOOL Integration
 
-The desktop application loads the privacy-clean MSP2TOOL 1.8.38 extension directly inside Microsoft WebView2.
+The desktop application loads the privacy-clean MSP2TOOL 1.8.40 extension directly inside Microsoft WebView2.
 
 This means the desktop client can provide the existing MSP2TOOL functionality without requiring a separate browser-extension installation.
 
