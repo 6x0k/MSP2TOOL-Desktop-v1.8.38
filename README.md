@@ -302,7 +302,7 @@ Empty directories are not tracked by Git and therefore do not need to be created
 Current version:
 
 ```text
-MSP2TOOL Desktop 1.8.38
+MSP2TOOL Desktop 1.8.40
 ```
 
 The desktop version corresponds to the integrated MSP2TOOL extension version.
@@ -383,6 +383,6 @@ Built with:
 - .NET 8
 - WPF
 - Microsoft Edge WebView2
-- MSP2TOOL 1.8.38 privacy-clean extension
+- MSP2TOOL 1.8.40 privacy-clean extension
 
 An independent desktop client focused on functionality, transparency, and privacy.
