@@ -1,4 +1,4 @@
-# MSP2TOOL-Desktop-1.8.40
+# MSP2TOOL-Desktop-1.8.42
 A modern, privacy-focused desktop toolkit for MovieStarPlanet 2, built with C#/.NET 8, WPF and WebView2
 
 ---
@@ -29,7 +29,7 @@ A modern, privacy-focused desktop toolkit for MovieStarPlanet 2, built with C#/.
 
 ### MSP2TOOL Integration
 
-The desktop application loads the privacy-clean MSP2TOOL 1.8.40 extension directly inside Microsoft WebView2.
+The desktop application loads the privacy-clean MSP2TOOL 1.8.42 extension directly inside Microsoft WebView2.
 
 This means the desktop client can provide the existing MSP2TOOL functionality without requiring a separate browser-extension installation.
 
@@ -51,6 +51,15 @@ Included functionality includes:
 - Pet Nickname
 - Account-State-Cleanup
 - MSP2 profile/game tools
+
+### 1.8.42 Improvements
+
+- Added persistent local D3 caching with `_readDurableD3Text` and `_writeDurableD3Text`.
+- Added pack-ready notifications with `_notifyPackReady`.
+- Improved background D3 preloading with `_warmD3Background`.
+- Added local-first D3 pack loading with `_fetchPackText`.
+- Improved local data prefetching with `xb:prefetch`.
+- Added persistent D3 cache support across service-worker restarts.
 
 The exact behavior of individual tools can depend on the current MovieStarPlanet 2 website and its APIs.
 
@@ -95,7 +104,7 @@ MSP2TOOL Desktop
 ├── Microsoft WebView2
 │   └── Embedded Chromium browser
 │
-└── MSP2TOOL Extension 1.8.38
+└── MSP2TOOL Extension 1.8.42
     ├── manifest.json
     ├── app.js
     ├── bg.js
@@ -172,8 +181,8 @@ You can also build the application directly from the source code. See [Build fro
 Clone the repository:
 
 ```powershell
-git clone https://github.com/6x0k/MSP2TOOL-Desktop-v1.8.38.git
-cd MSP2TOOL-Desktop-v1.8.38
+git clone https://github.com/6x0k/MSP2TOOL-Desktop-v1.8.42.git
+cd MSP2TOOL-Desktop-v1.8.42
 ```
 
 Restore the NuGet dependencies:
@@ -302,10 +311,21 @@ Empty directories are not tracked by Git and therefore do not need to be created
 Current version:
 
 ```text
-MSP2TOOL Desktop 1.8.40
+MSP2TOOL Desktop 1.8.42
 ```
 
 The desktop version corresponds to the integrated MSP2TOOL extension version.
+
+The integrated 1.8.42 extension also includes the selected safe 1.8.42 local caching and performance improvements:
+
+- Persistent D3 cache
+- Pack-ready notifications
+- Improved D3 warm-up
+- Local-first pack loading
+- `xb:prefetch` improvements
+
+The desktop build does not include the upstream credential interception, telemetry, vendor vault, remote gate, kill-switch, or other removed vendor functionality.
+
 
 The privacy-clean desktop build intentionally does not use the original vendor's remote version gate or kill-switch system.
 
@@ -383,6 +403,6 @@ Built with:
 - .NET 8
 - WPF
 - Microsoft Edge WebView2
-- MSP2TOOL 1.8.40 privacy-clean extension
+- MSP2TOOL 1.8.42 privacy-clean extension
 
 An independent desktop client focused on functionality, transparency, and privacy.
