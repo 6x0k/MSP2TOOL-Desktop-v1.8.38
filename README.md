@@ -181,8 +181,8 @@ You can also build the application directly from the source code. See [Build fro
 Clone the repository:
 
 ```powershell
-git clone https://github.com/6x0k/MSP2TOOL-Desktop-v1.8.42.git
-cd MSP2TOOL-Desktop-v1.8.42
+git clone https://github.com/6x0k/MSP2TOOL-Desktop-x64.git
+cd MSP2TOOL-Desktop-x64
 ```
 
 Restore the NuGet dependencies:
